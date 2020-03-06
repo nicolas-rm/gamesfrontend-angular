@@ -1,0 +1,58 @@
+<div>
+    <!-- <div class="card text-center">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            {{ game.TITLE | uppercase }}
+            <button class="btn btn-danger">
+              <i class="fas fa-trash"></i>
+            </button>
+        </div>
+
+
+        <div class="card-body">
+            {{ game.DESCRIPTION | uppercase}}
+
+        </div>
+    </div> -->
+    <div class="row">
+        <!-- <div> -->
+        <!-- <div *ngIf="games.length "> -->
+        <div class="col-lg-4" *ngFor="let game of games">
+            <div class="card text-center m-2 animated fadeIn ">
+
+
+                <div class="card-header d-flex justify-content-between align-items-center ">
+                    <div class="fa-pull-right">
+                        {{ game.TITLE | uppercase }}
+                    </div>
+                    <button class="btn btn-danger" (click)="eliminar(game.ID)">
+                      <i class="fas fa-trash" ></i>
+                  </button>
+                </div>
+
+                <div class="card-body view overlay">
+                    <img class="card-img-top" [src]="game.IMAGE | imagen" alt="Card image cap">
+                    <div class="card-title">
+                        <hr>
+                        <div>
+                            {{ game.DESCRIPTION | uppercase }}
+                        </div>
+                    </div>
+                    <button [routerLink]="['/games/edit',game.ID]" class="btn btn-success btn-block" (click)="editar(game.ID)">
+                      <i class="fas fa-edit" ></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <div *ngIf="readError">
+            <div class=" card ">
+                <div class="card-title ">
+                    NO EXISTEN JUEGOS REGISTRADOS
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

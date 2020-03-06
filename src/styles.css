@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+
+.main-container {
+    margin-top: 20px;
+}
+
+.img-logo {
+    width: 120px;
+}
+
+
+/* ANIMACIONES */
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.fast {
+    -webkit-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+.card-size {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    /* ancho */
+    width: 230px;
+    height: 270px;
+}
+
+.w150 {
+    width: 150px;
+}
+
+.centrado {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
